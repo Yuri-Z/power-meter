@@ -1,0 +1,50 @@
+@keyframes hammer-hit {
+  0% { transform: translateY(0) rotate(0deg); }
+  40% { transform: translateY(-60px) rotate(0deg); }
+  50% { transform: translateY(-60px) rotate(0deg); }
+  85% { transform: translateY(-60px) rotate(45deg); }
+  100% { transform: translateY(-60px) rotate(-90deg); }
+}
+
+@keyframes hammer-reset {
+  from { transform: translateY(-60px) rotate(-90deg); }
+  to { transform: translateY(0) rotate(0deg); }
+}
+
+.pm__hammer {
+  position: absolute;
+  top: 360px;
+  left: 205px;
+  width: 130px;
+  height: 130px;
+  background-image: url('@/assets/images/hammer.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &_hit {
+    animation: hammer-hit 2.2s forwards;
+    transform-origin: bottom center;
+  }
+  &_reset {
+    animation: hammer-reset .4s forwards;
+    transform-origin: bottom center;
+  }
+}
+
+.pm__striking-pad {
+  position: absolute;
+  top: 430px;
+  left: 50%;
+  width: 124px;
+  height: 68px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translate(-50%, 0);
+
+  &_idle, &_reset, &_playing, &_pending-1 {
+    background-image: url("@/assets/images/striking_pad.png");
+  }
+  &_pending-2, &_win, &_loss {
+    background-image: url("@/assets/images/striking_pad_active.png");
+  }
+}

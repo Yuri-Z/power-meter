@@ -1,0 +1,42 @@
+.pm__controls {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+
+.pm__message {
+  margin-bottom: 10px;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+
+  & > div:nth-child(3) {
+    color: #FF4646;
+  }
+}
+
+.pm__button {
+  width: 172px;
+  height: 36px;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  &_idle, &_win, &_loss, &_reset {
+    color: #fff;
+    background-color: #FF42E0;
+    border-color: #fff;
+  }
+  &_playing, &_pending-1, &_pending-2 {
+    color: #BB20A2;
+    background-color: #FFDF35;
+    border-color: #BB20A2;
+  }
+}

@@ -1,0 +1,16 @@
+.pm__robot {
+  width: 70px;
+  height: 70px;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &_idle, &_playing, &_pending-1 {
+    background-image: url("@/assets/images/robot_1.png");
+  }
+  &_pending-2, &_loss, &_reset {
+    background-image: url("@/assets/images/robot_2.png");
+  }
+  &_win {
+    background-image: url("@/assets/images/robot_3.png");
+  }
+}
