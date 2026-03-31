@@ -1,42 +1,33 @@
-# power-meter
+# Тестовое задание
 
-This template should help get you started developing with Vue 3 in Vite.
+Написать реализацию игры, используя JavaScript, HTML, CSS.
 
-## Recommended IDE Setup
+## Краткое описание игры
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Игрок видит перед собой шкалу, на вершине которой находится приз - Рубин.
+Слева от игрока находится уменьшенная шкала, визуализирующая возможную силу удара молота по кнопке. Шкала силы удара хаотично меняет своё
+направление. Необходимо подгадать момент и нажать на кнопку удара при достаточно заполненной шкале, чтобы получить приз.
 
-## Recommended Browser Setup
+## Бизнес-логика
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+● На стартовом экране пользователь видит перед собой приветственный текст, пустые шкалы и кнопку начала игры.
 
-## Type Support for `.vue` Imports in TS
+● После старта игры пользователь видит перед собой кнопку удара, хаотично меняющуюся в большую и меньшую сторону шкалу силы удара, а также поясняющий текст о том, что нужно нажать на кнопку удара в нужный момент.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+● По нажатию на кнопку удара начинается анимация удара молота по кнопке. После завершения удара шкала силомера заполняется до соответствующего силе удара значения.
 
-## Customize configuration
+● После полного завершения анимаций удара пользователь видит итоговый результат, соответствующий текст и кнопку начала новой игры.
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## Требования
 
-## Project Setup
+● Визуальная часть должна быть выполнена в соответствии с предоставленными макетами и исходными изображениями.
 
-```sh
-npm install
-```
+● Игровая область должна быть ограничена размерами экрана 360x640.
 
-### Compile and Hot-Reload for Development
+● Для решения задачи допустимо использовать любые фреймворки.
 
-```sh
-npm run dev
-```
+● Анимации и тайминги допустимо задавать по своему усмотрению.
 
-### Type-Check, Compile and Minify for Production
+● Разместить код необходимо в открытом git-репозитории.
 
-```sh
-npm run build
-```
+
